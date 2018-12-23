@@ -16,13 +16,13 @@ while guess != 'q':
     print("The number", guess, "is greater than 100. Please enter a number between 0 and 100")
     guess = input()
   if guess == computerRandomNumber:
-    print("Congradulations, you win!! The number selected is: ", computerRandomNumber)
+    print("Congradulations, you win!! My random number is: ", computerRandomNumber)
     print("The number of tries taken to guess my number is: ", countGuess)
     tryAgain = input("Would you like to try again? (y/n)")
     if tryAgain == 'n':
       break;
     else:
-      computerRandomNumber = 74
+      computerRandomNumber = random.randrange(0, 100)
       print("I have selected a new number between 0 and 100, try and guess the number or press q to quit!")
       guess = input()
   if guess == 'q':
