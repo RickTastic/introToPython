@@ -24,6 +24,7 @@ while guess != 'q':
     else:
       computerRandomNumber = random.randrange(0, 100)
       print("I have selected a new number between 0 and 100, try and guess the number or press q to quit!")
+      countGuess = 1
       guess = input()
   if guess == 'q':
     break;
