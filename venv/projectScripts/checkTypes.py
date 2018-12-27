@@ -1,4 +1,3 @@
-import math
 import isInteger
 def checkTypes(guess):
   try:

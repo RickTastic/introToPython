@@ -5,7 +5,7 @@ def main():
   startTime = time.time()
   print("Initialising Welcome Screen...\n")
   welcomeScreen.welcomeScreen()
-  print("\nTime to guess!!\n")
+  print("\nIt is time to guess!!!\n")
   guessingGame.guessingGame()
   endTime = time.time()
   timePlayed = endTime - startTime
