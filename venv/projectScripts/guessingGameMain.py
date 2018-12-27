@@ -1,16 +1,12 @@
-from welcomeScreen import welcomeScreen
-from guessingGame import guessingGame
+import welcomeScreen
+import guessingGame
 import time
 def main():
   startTime = time.time()
   print("Initialising Welcome Screen...\n")
-  welcomeScreen()
+  welcomeScreen.welcomeScreen()
   print("\nTime to guess!!\n")
-  guess = input()
-  guessingGame(guess)
+  guessingGame.guessingGame()
   endTime = time.time()
   timePlayed = endTime - startTime
   print("Total time played: ", timePlayed)
-
-
-
