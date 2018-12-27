@@ -1,15 +1,18 @@
 import random
 import checkTypes
-def guessingGame(guess):
-  '''
+def guessingGame():
+  """
   This is the logic for the guessing game. Advanced hints and features to be added.
   author: Ashai Ramsunder
   param guess: An integer guess
   return:
-  '''
+  """
+  guess = input()
   done = False
   while not done:
-    typeCheck = checkTypes()
+    computerRandomNumber = 44
+    typeCheck = checkTypes.checkTypes(guess)
+    countGuess = 1
     if typeCheck['isValid']:
       if guess == computerRandomNumber:
         print("Congratulation's, you win!! My random number is: ", computerRandomNumber)
@@ -18,7 +21,7 @@ def guessingGame(guess):
         if tryAgain == 'n':
           done = True
         else:
-          computerRandomNumber = random.randrange(0, 100)
+          computerRandomNumber = 85
           print("I have selected a new number between 0 and 100, try and guess the number or press q to quit!")
           countGuess = 1
           guess = input()
@@ -41,5 +44,6 @@ def guessingGame(guess):
         countGuess += 1
         print()
     else:
-      print(checkTypes['errorMessage'])
-      done = True
+      print(typeCheck['errorMessage'])
+      done = False
+  print("Exiting...")
