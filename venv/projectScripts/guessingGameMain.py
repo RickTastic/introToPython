@@ -10,3 +10,6 @@ def main():
   endTime = time.time()
   timePlayed = endTime - startTime
   print("Total time played: ", timePlayed)
+
+if __name__ == "__main__":
+  main()
